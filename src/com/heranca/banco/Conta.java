@@ -1,6 +1,6 @@
 package com.heranca.banco;
 
-public class Conta {
+public class Conta extends Object {
 
 	private Titular titular;
 	private int agencia;
