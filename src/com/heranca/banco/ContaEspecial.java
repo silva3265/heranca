@@ -25,6 +25,7 @@ public class ContaEspecial extends ContaInvestimento {
 		return getSaldo() + getLimiteChequeEspecial();
 	}
 	
+	@Override // esta sobrescrevendo da super classe
 	public void imprimirDemonstrativo() {
 		System.out.println();
 		System.out.printf("Agência: %d%n", getAgencia());
