@@ -25,16 +25,12 @@ public class ContaEspecial extends ContaInvestimento {
 		return getSaldo() + getLimiteChequeEspecial();
 	}
 	
-	@Override // esta sobrescrevendo da super classe
+	@Override
 	public void imprimirDemonstrativo() {
-		System.out.println();
-		System.out.printf("Agência: %d%n", getAgencia());
-		System.out.printf("Conta: %d%n", getNumero());
-		System.out.printf("Titular: %s%n", getTitular().getNome());
-		System.out.printf("Saldo: %.2f%n", getSaldo());
-		System.out.printf("Saldo disponivel: %.2f%n", getSaldoDisponivel());
+		super.imprimirDemonstrativo();
 	}
 	
+	@Override
 	protected void validarSaldoParaSaque(double valorSaque) {
         if (getSaldoDisponivel() < valorSaque) {
             throw new RuntimeException("Saldo insuficiente para saque");
