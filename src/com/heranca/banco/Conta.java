@@ -7,6 +7,12 @@ public class Conta extends Object {
 	private int numero;
 	private double saldo;
 
+	public Conta(Titular titular, int agencia, int numero) {
+		this.titular = titular;
+		this.agencia = agencia;
+		this.numero = numero;
+	}
+
 	public Titular getTitular() {
 		return titular;
 	}
