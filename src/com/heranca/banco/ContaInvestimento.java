@@ -3,6 +3,10 @@ package com.heranca.banco;
 public class ContaInvestimento extends Conta {
 
 	private double valorTotalRendimentos;
+	
+	public ContaInvestimento() {
+		super();
+	}
 
 	public double getValorTotalRendimentos() {
 		return valorTotalRendimentos;

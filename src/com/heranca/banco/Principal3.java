@@ -12,7 +12,7 @@ public class Principal3 {
 
 		conta1.imprimirDemonstrativo();
 
-		conta1.depositar(100);
+		conta1.depositar(100); 
 		conta1.imprimirDemonstrativo();
 
 		conta1.sacar(200);
