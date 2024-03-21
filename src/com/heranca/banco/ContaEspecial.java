@@ -6,9 +6,9 @@ public class ContaEspecial extends ContaInvestimento {
 	private double limiteChequeEspecial;
 
 	public ContaEspecial(Titular titular, int agencia, int numero, double tarifaMensal) {
-        super(titular, agencia, numero);
-        this.tarifaMensal = tarifaMensal;
-    }
+		super(titular, agencia, numero);
+		this.tarifaMensal = tarifaMensal;
+	}
 
 	public double getTarifaMensal() {
 		return tarifaMensal;
@@ -45,11 +45,12 @@ public class ContaEspecial extends ContaInvestimento {
 	public void debitarTarifaMensal() {
 		sacar(getTarifaMensal());
 	}
-	
+
 	@Override
 	public String toString() {
 		return "ContaEspecial{" + "titular=" + getTitular() + ", agencia=" + getAgencia() + ", numero=" + getNumero()
-				+ " valorRendimentos=" + getValorTotalRendimentos() + "tarifamensal=" + tarifaMensal + "limiteChequeEspecial=" + limiteChequeEspecial + '}';
+				+ " valorRendimentos=" + getValorTotalRendimentos() + "tarifamensal=" + tarifaMensal
+				+ "limiteChequeEspecial=" + limiteChequeEspecial + '}';
 	}
 
 }
