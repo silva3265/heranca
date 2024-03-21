@@ -77,4 +77,9 @@ public class Conta extends Object {
 		System.out.printf("Saldo: %.2f%n", getSaldo());
 	}
 
+	@Override
+	public String toString() {
+		return "Conta{" + "titular=" + titular + ", agencia=" + agencia + ", numero=" + numero + '}';
+	}
+
 }
