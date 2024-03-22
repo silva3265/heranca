@@ -82,4 +82,22 @@ public class Conta extends Object {
 		return "Conta{" + "titular=" + titular + ", agencia=" + agencia + ", numero=" + numero + '}';
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (this.getClass() != obj.getClass()) // se a classe desse objeto (Conta) se é do mesmo tipo (obj)
+			return false;
+
+		Conta conta = (Conta) obj;
+		if (this.agencia != conta.agencia) // se a gencia for diferente da agencia da Conta, retorna false
+			return false;
+		if (this.numero != conta.numero) // se o numero for diferente, retorna false
+			return false;
+
+		return true; // caso contrario retorna true
+	}
+
 }
