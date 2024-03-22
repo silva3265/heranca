@@ -6,13 +6,27 @@ public class Principal {
 		Titular titular = new Titular("João da Silva", "12312312300");
 		Conta conta1 = new Conta(titular, 1234, 999999);
 		Conta conta2 = new Conta(titular, 1234, 999999);
-		ContaEspecial contaEspecial = new ContaEspecial(titular, 1234, 999999, 90);
+		Conta conta3 = new Conta(titular, 1234, 999999);
 
-		//System.out.println(conta1 == conta2); // == ele compara o endereõ de memoria, apontando pro mesmo objeto
-		System.out.println(conta1.equals(conta2)); //equals - vai comprar a igualdade do conteudo do objeto
-		System.out.println(conta1.equals(contaEspecial));
-		
-		/* tem que sobrescrever o metodo equals na classe Conta */
+		// Reflexivo
+		System.out.println(conta1.equals(conta1)); // sempre true
+
+		// Simétrico
+		System.out.println(conta1.equals(conta2));
+		System.out.println(conta2.equals(conta1));
+
+		// Transitivo
+		System.out.println(conta1.equals(conta2));
+		System.out.println(conta2.equals(conta3));
+		System.out.println(conta1.equals(conta3));
+
+		// Consistente
+		System.out.println(conta1.equals(conta2));
+		System.out.println(conta1.equals(conta2));
+		System.out.println(conta1.equals(conta2));
+
+		// Teste com nulo sempre retorna false
+		System.out.println(conta1.equals(null));
 	}
 
 }

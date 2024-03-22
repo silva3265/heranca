@@ -1,5 +1,7 @@
 package com.heranca.banco;
 
+import java.util.Objects;
+
 public class Conta extends Object {
 
 	private Titular titular;
@@ -99,5 +101,11 @@ public class Conta extends Object {
 
 		return true; // caso contrario retorna true
 	}
+	
+	@Override
+    public int hashCode() {
+        return Objects.hash(agencia, numero);
+    }
+
 
 }
